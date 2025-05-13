@@ -1,8 +1,8 @@
-import axios from "axios";
+import axios from './customize-axios';
 
-const fetchAllUser = () => {
+const fetchAllUser = (page) => {
     // return axios.get("https://jsonplaceholder.typicode.com/posts");
-    return axios.get("https://reqres.in/api/users?page=2", {
+    return axios.get(`/api/users?page=${page}`, {
         headers: {
             'x-api-key': 'reqres-free-v1'
         }
